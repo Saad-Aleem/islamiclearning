@@ -11,7 +11,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <title>Psyche Observations</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% load static %}<link rel="shortcut icon" type="image/svg" href="{% static 'img/brain-solid.svg' %}" alt="Home">
 </head>
 
@@ -49,7 +48,7 @@
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        {% load static %}<img src="{% static 'img/books.jpg' %}" class="w-100" height="500px" alt="...">
+        {% load static %}<img src="{% static 'img/books.jpg' %}" style="max-width: 100%; height: 500px; alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h1 class="fw-bold">CRITIQUE AND DEVELOPMENT</h1>
           <p class="lead mb-0">A progressive way to develop a narrative</p>
@@ -63,9 +62,9 @@
     <div class="p-2"></div>
   </div>
 
-  <div class="container">
+  <div class="container" style="max-width: 900px;">
     {% for item in posts %}
-    <div class="card" style="width: 900px;">
+    <div class="card">
       {% load static %}<img src="{% static '{{item.article_img}}' %}" class="card-img-top" height="300px" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{item.article_topic}}</h5>
