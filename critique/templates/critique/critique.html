@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Font Awsome-->
+  <script src="https://kit.fontawesome.com/45da99070c.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <title>Psyche Observations</title>
+  <link rel="shortcut icon" type="image/svg" href="static/img/brain-solid.svg" alt="Home">
+</head>
+
+<body>
+  <div class="main_header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-brain"></i> Psyche Observations
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/structure">Structure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Critique and Development</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static/img/books.jpg" class="w-100" height="500px" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="fw-bold">CRITIQUE AND DEVELOPMENT</h1>
+          <p class="lead mb-0">A progressive way to develop a narrative</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-grid gap-3">
+    <div class="p-2"></div>
+    <div class="p-2"></div>
+    <div class="p-2"></div>
+  </div>
+
+  <div class="container">
+    {% for item in posts %}
+    <div class="card" style="width: 900px;">
+      <img src="{{item.article_img}}" class="card-img-top" height="300px" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.article_topic}}</h5>
+        <p class="card-text">{{item.get_article_category_display}}</p>
+        <a href="/critique/blogpost/{{item.id}}" class="btn btn-outline-primary">Read</a>
+      </div>
+    </div>
+    <div class="d-grid gap-3">
+      <div class="p-2"></div>
+      <div class="p-2"></div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="d-grid gap-3">
+    <div class="p-2"></div>
+    <div class="p-2"></div>
+    <div class="p-2"></div>
+  </div>
+
+
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
+
+<!-- <div class="d-grid gap-3">
+        <div class="p-2"></div>
+        <div class="p-2"></div>
+        <div class="p-2"></div>
+      </div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

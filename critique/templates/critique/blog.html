@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Font Awsome-->
+    <script src="https://kit.fontawesome.com/45da99070c.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Psyche Observations</title>
+    <link rel="shortcut icon" type="image/svg" href="/static/img/brain-solid.svg" alt="Home">
+</head>
+
+<body>
+    <div class="main_header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-brain"></i> Psyche Observations
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/structure">Structure</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/critique">Critique and Development</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+    <!-- Page content-->
+    <div class="d-grid gap-3">
+        <div class="p-2"></div>
+        <div class="p-2"></div>
+        <div class="p-2"></div>
+    </div>
+    <div class="mx-auto" style="width: 900px;">
+        <article>
+            <!-- Post header-->
+            <header class="mb-4">
+                <!-- Post title-->
+                <h1 class="fw-bolder mb-1">{{post.article_topic}}</h1>
+                <div class="d-grid gap-3">
+                    <div class="p-2"></div>
+                </div>
+                <h5 class="fw-light mb-1 fst-italic">By: {{post.writer_name}}</h5>
+                <div class="d-grid gap-3">
+                    <div class="p-2"></div>
+                </div>
+                <h3 class="lead">{{post.get_article_category_display}}</h3>
+            </header>
+            <!-- Preview image figure-->
+            <figure class="mb-4"><img class="img-fluid rounded" src="/{{post.article_img}}" alt="..." ></figure>
+            <!-- Post content-->
+            <div class="d-grid gap-3">
+                <div class="p-2"></div>
+                <div class="p-2"></div>
+                <div class="p-2"></div>
+            </div>
+            <section class="mb-5">
+                <p class="lead">{{post.para1}}</p>
+                <div class="d-grid gap-3">
+                    <div class="p-2"></div>
+                </div>
+                <p class="lead">{{post.para2}}</p>
+                <div class="d-grid gap-3">
+                    <div class="p-2"></div>
+                </div>
+                <p class="lead">{{post.para3}}</p>
+                <div class="d-grid gap-3">
+                    <div class="p-2"></div>
+                </div>
+                <p class="lead">{{post.para4}}</p>
+                <div class="d-grid gap-3">
+                    <div class="p-2"></div>
+                </div>
+                <p class="lead">{{post.para5}}</p>
+                <div class="d-grid gap-3">
+                    <div class="p-2"></div>
+                </div>
+                <p class="lead">{{post.para6}}</p>
+                <div class="d-grid gap-3">
+                    <div class="p-2"></div>
+                </div>
+            </section>
+        </article>
+    </div>
+    <div class="d-grid gap-3">
+        <div class="p-2"></div>
+        <div class="p-2"></div>
+        <div class="p-2"></div>
+    </div>
+    
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
