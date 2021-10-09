@@ -65,7 +65,6 @@
   <div class="container" style="max-width: 900px;">
     {% for item in posts %}
     <div class="card">
-      <img src="{{item.article_img}}" class="card-img-top" height="300px" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{item.article_topic}}</h5>
         <p class="card-text">{{item.get_article_category_display}}</p>
