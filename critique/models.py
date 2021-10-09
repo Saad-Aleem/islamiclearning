@@ -5,7 +5,7 @@ from django.db import models
 class develop(models.Model):
     article_id = models.AutoField
     article_topic = models.CharField(max_length=100, default='none')
-    article_img = models.ImageField(upload_to='media/', default='media/sunset.jpg')
+    article_img = models.ImageField(upload_to='{{MEDIA_URL}}', default='{{MEDIA_URL}}sunset.jpg')
     article_category = models.CharField(max_length=50, choices=(('PSY','Psychology'), ('EDU','Educational Philosophy')), default='Psychology')
     writer_name = models.CharField(max_length=50, default='none')
     para1 = models.TextField(default='Para')
